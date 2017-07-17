@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QuoteApp</string>
+    <string name="quote">I\'ll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda.</string>
+
+    <string-array name="quotes">
+        <item>War is peace. Freedom is slavery.  Ignorance is strength.</item>
+        <item>Just because something doesn’t do what you planned it to do doesn’t mean it’s useless. - Thomas Edison</item>
+        <item>All of the biggest technological inventions created by man - the airplane, the automobile, the computer - says little about his intelligence, but speaks volumes about his laziness. - Mark Kennedy </item>
+    </string-array>
+</resources>
