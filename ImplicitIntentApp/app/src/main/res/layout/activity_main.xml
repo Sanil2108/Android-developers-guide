@@ -1,0 +1,26 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- This is a simple TextView. it acts as just a label to show users what the EditText under it does -->
+    <!-- I did not assign an id to it because we will never need to refer to it from our java code -->
+    <TextView
+        android:text="Web address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- This just takes the input of the user -->
+    <EditText
+        android:id="@+id/edit_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- We will attach the onClickListener to this Button and we will then start a new app from here -->
+    <Button
+        android:id="@+id/submit_query"
+        android:text="GO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
