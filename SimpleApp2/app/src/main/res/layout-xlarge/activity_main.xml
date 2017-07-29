@@ -1,0 +1,20 @@
+<LinearLayout android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical|center"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:layout_margin="120dp"
+        android:textSize="20sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis mauris augue, et facilisis mauris volutpat a. Etiam posuere metus sed risus interdum dictum. Etiam tristique vestibulum metus vel tempus. Aliquam purus mauris, faucibus ut semper posuere, iaculis eget sapien. Nunc rhoncus elit quis leo lacinia, at sollicitudin mi placerat. Curabitur placerat massa vitae justo luctus, in auctor sem condimentum. Ut at tempor tortor, non molestie ligula. Suspendisse potenti. Donec nec bibendum felis."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_query"
+        android:text="Default text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
