@@ -1,0 +1,51 @@
+<LinearLayout android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:text="Item 1"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:id="@+id/button1">
+
+    </Button>
+
+
+    <Button
+        android:text="Item 2"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:id="@+id/button2">
+
+    </Button>
+
+
+    <Button
+        android:text="Item 3"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:id="@+id/button3">
+
+    </Button>
+
+
+    <Button
+        android:text="Item 4"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:id="@+id/button4">
+
+    </Button>
+
+
+    <Button
+        android:text="Item 5"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:id="@+id/button5">
+
+    </Button>
+
+</LinearLayout>

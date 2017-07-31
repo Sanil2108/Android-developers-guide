@@ -1,10 +1,16 @@
 package sanilk.com.mapapi1;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -19,7 +25,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MainActivity extends Activity implements OnMapReadyCallback{
+public class MainActivity extends Activity implements OnMapReadyCallback, LocationListener{
+    GoogleMap googleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +44,32 @@ public class MainActivity extends Activity implements OnMapReadyCallback{
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng latLng=new LatLng(28.537810, 77.295428);
-
+        LatLng latLng=new LatLng(29.537810, 77.295428);
         Bitmap icon= BitmapFactory.decodeResource(getResources(), getResources().getIdentifier("test01", "drawable", getPackageName())).copy(Bitmap.Config.ARGB_8888, true);
-        if(Build.VERSION.SDK_INT>=19){
-            icon.setWidth(10);
-            icon.setHeight(10);
-        }
 
-        googleMap.setMyLocationEnabled(true);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-        googleMap.addMarker(new MarkerOptions().title("Home").position(latLng).icon(BitmapDescriptorFactory.fromBitmap(icon)));
+        this.googleMap=googleMap;
+        this.googleMap.setMyLocationEnabled(true);
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        Marker marker = googleMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 9));
+    }
+
+    @Override
+    public void onStatusChanged(String s, int i, Bundle bundle) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String s) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String s) {
+
     }
 }
